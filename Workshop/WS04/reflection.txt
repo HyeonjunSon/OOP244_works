@@ -1,0 +1,11 @@
+In this workshop, I worked on simulating a canister that holds liquid food products using C++. The main focus was to use constructors, a destructor, and a reference to the current object. This exercise helped me understand some important concepts of object-oriented programming in a practical way.
+
+First, I created the Canister class in the Canister.h file. This class has attributes like capacity, current volume, and content of the canister. The default constructor initializes the canister with a capacity of 10 units and "Water" as its content. There is also a parameterized constructor that allows me to set a custom capacity and content, which was useful for creating different types of canisters.
+
+Next, I learned about the destructor, which is a special function that gets called when an object is destroyed. In this case, the destructor prints a message indicating which canister is being destroyed. Although the canister class doesn't manage dynamic memory, it was still interesting to see how destructors work for cleanup purposes.
+
+The member functions like addLiquid, pourOut, and the getters (getCapacity, getCurrentVolume, and getContent) were implemented to manage the state of the canister. These functions help in adding liquid, pouring out liquid, and getting the current state of the canister. I learned how to ensure that the canister doesn't overflow or underflow by adding checks in these functions.
+
+One of the cool parts was the fill method, which returns a reference to the current object. This allowed me to chain multiple method calls together, making the code more readable and efficient. For example, I could fill the canister with 10 units and then another 5 units in a single line of code.
+
+Overall, this workshop was a great learning experience. It reinforced my understanding of constructors, destructors, and method chaining. Writing and testing the code helped me grasp how these concepts are used in real-world programming. It also showed me the importance of writing clean and maintainable code, even for simple classes like this canister example.

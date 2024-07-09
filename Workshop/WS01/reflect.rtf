@@ -1,0 +1,62 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww9180\viewh18000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Work shop 2\
+Hyeonjun Son\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b\fs26 \cf0 Student id 
+\f0\b0 123526238\
+\
+in this workshop use a data structures and dynamic memory managemant and file input/output operation. the importants thing is that, Central to handling the dynamic nature of the employee data. the program needs to dapt to varying number of records, which is typical in real world applications. such as Employee Structure and Dynamic Array. employee structure is used to store individual employee data, including a dynamically allocated string for names, which allows handling of variable length names efficiently. and then dynamic array is that the \'91employees\'92 pointer to an array of \'91Employee\'92\
+structures accommodates any number of records determined at runtime, showcasing an applocation of dynamic memory.\
+and file input, output operations are enables the program to interact with external data files, making it versatile and capable of handling data from various sources without hardcoding values.\
+I will provide you with an example of C++ code that handles file I/O operations. This includes the basic tasks of opening files, reading data, and closing files. Let's also briefly include how you connect and use it with the Employee module.\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 bool openFile(const char* filename) \{\
+fptr = fopen(filename, "r");\
+if (!fptr) \{ return false;\
+\} return true;\
+\}\
+void closeFile()\{\
+if (fptr)\{\
+fclose(fptr);\
+fptr = nullptr;\
+\}\
+\}\
+bool read(int& empNo) \{\
+return fscanf(fptr, "%d,", &empNo) == 1; \}\
+bool read(double& salary) \{\
+return fscanf(fptr, "%lf,", &salary) == 1; \}\
+bool read(char* name) \{\
+return fscanf(fptr, "%[^\\n]\\n", name) == 1; \}\
+\
+struct Employee \{\
+char* name;\
+int empNo;\
+double salary;\
+\};\
+bool loadEmployee(Employee& emp)\
+\{ int empNo; doublesalary; char buffer[256];\
+ if (!read(empNo) || !read(salary) || !read(buffer))\
+\{ return false; \
+\} emp.name = new char[strlen(buffer) + 1];\
+ strcpy(emp.name, buffer); \
+ emp.empNo = empNo; emp.salary = salary; return true; \}\
+\
+The code above reads employee data from the file and prints the number, name, and salary of each employee. The role of each part is clearly separated through modularization, and it is easy to maintain and expand.\
+
+\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 Throughout this workshop, i also encountered debugging challenges, particularly with file reading errors and segmentation faults due to improper memory handling, these issues were instrumental in improving my debugging skills and understanding of how different parts of a program interact.
+\f2 \
+
+\f3\fs24 \
+}

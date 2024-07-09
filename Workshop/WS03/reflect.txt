@@ -1,0 +1,11 @@
+ I implemented a simple billing system using C++ which involved managing items and generating bills. This project comprised multiple components including classes for items (Item) and bills (Bill), alongside a main function to drive the application. Each component played a crucial role in simulating a real-world billing system, demonstrating practical applications of object-oriented programming (OOP) concepts.
+
+The Item class was designed to encapsulate the properties of items, such as name and price, demonstrating the encapsulation feature of OOP. The methods within this class provided functionality to modify and access item details, showcasing the use of class methods and data hiding. On the other hand, the Bill class managed multiple items and calculated total amounts, reflecting the concept of aggregation and relationship between classes.
+
+One of the major challenges I encountered was ensuring the correct management of memory, particularly in dynamically allocating memory for storing multiple items in a bill. I addressed this challenge by carefully managing pointers and implementing destructor in the Bill class to prevent memory leaks, which reinforced my understanding of memory management in C++.
+
+The main function tied everything together, allowing for user interaction to add items to the bill and display the total. This part of the project emphasized the importance of user input validation and the practical use of loops and conditional statements in managing program flow.
+
+Reflecting on this project, I realized the importance of a well-structured design before coding. The use of header files (Item.h and Bill.h) for declarations and separation of implementation in .cpp files improved code organization and readability. Moreover, this project reinforced my understanding of OOP concepts like inheritance, polymorphism, and encapsulation, and provided hands-on experience in applying these concepts to solve real-world problems.
+
+This project not only strengthened my technical skills but also improved my problem-solving abilities and deepened my understanding of how theoretical concepts apply in practical scenarios.
