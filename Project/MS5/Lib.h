@@ -1,0 +1,19 @@
+#ifndef SENECA_LIB_H
+#define SENECA_LIB_H
+
+const int SENECA_MAX_LOAN_DAYS = 15;
+
+const int SENECA_TITLE_WIDTH = 30;
+
+const int SENECA_AUTHOR_WIDTH = 15;
+
+const int SENECA_SHELF_ID_LEN = 4;
+
+const int SENECA_LIBRARY_CAPACITY = 333;
+
+
+const int SENECA_SEARCH_ALL = 1;
+const int SENECA_SEARCH_CHECKOUT = 2;
+const int SENECA_SEARCH_AVAILABLE = 4;
+
+#endif //SENECA_LIB_H
